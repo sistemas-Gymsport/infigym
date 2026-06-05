@@ -62,7 +62,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                to="/cotizacion"
+                to="/nosotros"
                 className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-black text-white text-xs font-bold rounded uppercase tracking-widest hover:bg-gray-800 transition-colors"
               >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
