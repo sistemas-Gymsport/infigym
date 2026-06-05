@@ -43,7 +43,7 @@ export default function Footer() {
                 { to: '/', label: 'Inicio' },
                 { to: '/nosotros', label: 'Nosotros' },
                 { to: '/tienda', label: 'Tienda' },
-                { to: '/cotizacion', label: 'Cotización' },
+                { to: '/nosotros', label: 'Conocenos' },
               ].map(({ to, label }) => (
                 <Link
                   key={to}

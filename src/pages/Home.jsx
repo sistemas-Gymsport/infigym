@@ -93,10 +93,10 @@ export default function Home() {
                 </svg>
               </Link>
               <Link
-                to="/cotizacion"
+                to="/nosotros"
                 className="px-8 py-4 border border-white/40 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all backdrop-blur-sm"
               >
-                ¡Escríbenos!
+                ¡Conocenos y escríbenos!
               </Link>
             </div>
           </div>

@@ -121,7 +121,7 @@ export default function Nosotros() {
                   </svg>
                 </Link>
                 <Link
-                  to="/cotizacion"
+                  to="/nosotros"
                   className="px-8 py-4 border border-gray-200 text-black text-xs font-bold uppercase tracking-widest hover:border-black transition-colors flex items-center justify-center"
                 >
              </Link>
