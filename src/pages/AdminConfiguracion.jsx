@@ -33,7 +33,7 @@ export default function AdminConfiguracion() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold uppercase text-gray-500 tracking-wider">Número WhatsApp</label>
-              <input type="text" value={settings.whatsapp || ''} onChange={e => setSettings({...settings, whatsapp: e.target.value})} className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-black focus:border-black text-sm text-gray-800" placeholder="+52 1 446 200 0666" />
+              <input type="text" value={settings.whatsapp || ''} onChange={e => setSettings({...settings, whatsapp: e.target.value})} className="px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-black focus:border-black text-sm text-gray-800" placeholder="+52 1 81 3894 0867" />
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold uppercase text-gray-500 tracking-wider">Texto del Footer</label>
