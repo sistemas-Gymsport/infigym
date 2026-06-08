@@ -30,29 +30,34 @@ export default function ProductoDetalle() {
   }
 
   return (
-    <div className="bg-white min-h-screen pb-24">
+    {/* Agregamos pt-24 (padding-top) aquí para que el menú de arriba no se coma tu contenido */}
+    <div className="bg-white min-h-screen pb-24 pt-24">
       
-      {/* Breadcrumb — Corregido para evitar que el texto se corte a la mitad */}
+      {/* Breadcrumb */}
       <div className="border-b border-gray-100 bg-gray-50/50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <nav className="flex flex-wrap items-center gap-2 text-xs font-medium text-gray-500 uppercase tracking-wider">
-            <Link to="/" className="hover:text-black transition-colors">
-              Inicio
-            </Link>
-            <span className="text-gray-300">/</span>
-            <Link to="/tienda" className="hover:text-black transition-colors">
-              Tienda
-            </Link>
-            <span className="text-gray-300">/</span>
-            <span className="hover:text-black transition-colors cursor-default">
-              {product.category}
-            </span>
-            <span className="text-gray-300">/</span>
-            {/* Se eliminó 'truncate' y 'max-w' para que el texto siempre sea visible */}
-            <span className="text-black font-bold whitespace-normal break-words">
-              {product.name}
-            </span>
-          </nav>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center gap-2 text-xs font-medium text-gray-500 uppercase tracking-wider">
+          <Link to="/" className="hover:text-black transition-colors">
+            Inicio
+          </Link>
+
+          <span className="text-gray-300">/</span>
+
+          <Link to="/tienda" className="hover:text-black transition-colors">
+            Tienda
+          </Link>
+
+          <span className="text-gray-300">/</span>
+
+          <span className="hover:text-black transition-colors cursor-pointer">
+            {product.category}
+          </span>
+
+          <span className="text-gray-300">/</span>
+
+          {/* Eliminamos el truncate y los max-w, y agregamos whitespace-normal y break-words */}
+          <span className="text-black font-bold whitespace-normal break-words">
+            {product.name}
+          </span>
         </div>
       </div>
 
@@ -98,8 +103,6 @@ export default function ProductoDetalle() {
                   : 'Agotado'}
               </span>
             </div>
-
-            {/* Los botones de cotización de WhatsApp fueron eliminados de esta sección */}
 
             {/* Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 py-6 border-y border-gray-100">
