@@ -77,17 +77,7 @@ export default function Footer() {
           <div className="md:col-span-3 md:col-start-10">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-300 mb-5">Contacto</h4>
             <div className="flex flex-col gap-4">
-              <a
-                href="mailto:info@infiniteproducts.com"
-                className="flex items-center gap-3 text-sm text-gray-300 hover:text-white transition-colors group"
-              >
-                <span className="w-8 h-8 border border-gray-700 group-hover:border-gray-600 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </span>
-                info@infiniteproducts.com
-              </a>
+              
               <a
                 href="tel:+5214462000666"
                 className="flex items-center gap-3 text-sm text-gray-300 hover:text-white transition-colors group"
