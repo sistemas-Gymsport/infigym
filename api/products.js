@@ -15,11 +15,33 @@ export default async function handler(req, res) {
 
     if (req.method === 'POST') {
       const { name, description, image_url, category, features, stock_status } = req.body;
-      const newProduct = await sql`
-        INSERT INTO products (name, description, image_url, category, features, stock_status)
-        VALUES (${name}, ${description}, ${image_url}, ${category}, ${features}, ${stock_status})
-        RETURNING *
+      
+      const missingIds = await sql`
+        SELECT s.i AS missing_id
+        FROM generate_series(1, (SELECT COALESCE(MAX(id), 0) FROM products)) s(i)
+        LEFT JOIN products p ON p.id = s.i
+        WHERE p.id IS NULL
+        ORDER BY s.i
+        LIMIT 1;
       `;
+
+      let newProduct;
+
+      if (missingIds.length > 0) {
+        const nextId = missingIds[0].missing_id;
+        newProduct = await sql`
+          INSERT INTO products (id, name, description, image_url, category, features, stock_status)
+          VALUES (${nextId}, ${name}, ${description}, ${image_url}, ${category}, ${features}, ${stock_status})
+          RETURNING *
+        `;
+      } else {
+        newProduct = await sql`
+          INSERT INTO products (name, description, image_url, category, features, stock_status)
+          VALUES (${name}, ${description}, ${image_url}, ${category}, ${features}, ${stock_status})
+          RETURNING *
+        `;
+      }
+
       return res.status(201).json(newProduct[0]);
     }
 
